@@ -17,7 +17,7 @@ Lee `knowledge/marca.md` (sección «Look and feel»), `knowledge/plantilla-emai
 - **Titular:** el beneficio o el motivo del correo en una frase, no el asunto repetido.
 - **CTA:** el texto del CTA principal aprobado, con verbo y resultado, de unos 30 caracteres como máximo para que no parta línea en móvil. La imagen principal, el botón y el enlace de la P. D. van a la **misma URL** con el mismo `utm_content`.
 - **Microtexto bajo el botón:** el dato que quita fricción (duración del vídeo, fecha y hora del webinar, «sin registro»). Solo datos de la ficha; si no hay, borras la fila.
-- **Imagen principal y miniatura del vídeo:** URL del gestor de archivos de HubSpot, de 1128 px de ancho (retina) y menos de 200 KB. El `alt` describe lo que dice la imagen, para quien tiene las imágenes bloqueadas. Si no hay imagen, `[DATO: URL imagen]`.
+- **Imagen principal y miniatura del vídeo:** URL del gestor de archivos de HubSpot, de 1128 px de ancho (retina) y menos de 200 KB. El `alt` describe lo que dice la imagen, para quien tiene las imágenes bloqueadas. Si no hay imagen, `[URL: imagen]`.
 - **Correo de la sala (5–10 minutos antes):** sin imagen principal, sin vídeo, sin cross-selling ni P. D. Solo el titular («Empezamos en 5 minutos»), una línea y el botón a la sala.
 - **Virtual DUA y Empuries:** sin P. D. comercial ni cross-selling destacado. Formato de notas de versión.
 - Los demás enlaces del cuerpo (gestor comercial, etc.) van en naranja y en negrita, nunca azules ni subrayados.
@@ -30,4 +30,4 @@ Lee `knowledge/marca.md` (sección «Look and feel»), `knowledge/plantilla-emai
 
 ## Salida
 - Un archivo por correo: `outputs/<division>-<version>/html/NN-<tipo>.html`.
-- Al agente principal le devuelves una tabla: Nº | Archivo | Bloques usados | `[DATO]` pendientes | Peso en KB.
+- Al agente principal le devuelves una tabla: Nº | Archivo | Bloques usados | `[URL]` pendientes | Peso en KB.

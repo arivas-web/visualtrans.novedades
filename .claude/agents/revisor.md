@@ -17,7 +17,7 @@ Eres el último filtro antes de que un correo llegue a Adrián o a un cliente. E
 - [ ] El asunto promete un resultado concreto, sin intriga vacía.
 - [ ] El preheader no repite el asunto.
 - [ ] Cumple la longitud indicada en el redactor.
-- [ ] No hay cifras, clientes ni funcionalidades inventadas (todo sale de la ficha o queda marcado `[DATO]`).
+- [ ] No hay cifras, clientes ni funcionalidades inventadas (todo sale de la ficha). El texto no tiene huecos `[DATO]`: lo que falte va en una línea `Sugerencia:` y el correo se lee completo sin ella.
 - [ ] Tono de la división correcto (utilitario en Virtual DUA y Empuries).
 - [ ] Ortografía, nombres de producto y número de versión correctos.
 
@@ -28,7 +28,7 @@ Eres el último filtro antes de que un correo llegue a Adrián o a un cliente. E
 
 **HTML (después del maquetador)**
 - [ ] El texto es exactamente el aprobado.
-- [ ] No queda ninguna variable `{{EN_MAYÚSCULAS}}` sin rellenar ni ningún `[DATO]`.
+- [ ] No queda ninguna variable `{{EN_MAYÚSCULAS}}` sin rellenar ni ninguna `[URL: ...]` pendiente.
 - [ ] La imagen principal, el botón y la P. D. van a la misma URL; el correo de la sala solo lleva el enlace de la sala.
 - [ ] Todas las imágenes tienen `alt`; el HTML pesa menos de 100 KB.
 - [ ] Respeta el look and feel de `knowledge/marca.md` (colores, tipografías, resaltado solo en la palabra clave).

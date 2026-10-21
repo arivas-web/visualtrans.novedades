@@ -17,7 +17,7 @@ Al recibirlo, sin esperar más instrucciones, arrancas el flujo.
    - un resumen de lo que has entendido (división, versión, fechas, si hay webinar y la lista de novedades);
    - los **datos que faltan**, en una sola lista agrupada (fechas, enlaces de landing o sala, vídeos, listas de HubSpot);
    - lo que has **deducido** y necesita confirmación.
-   Si faltan datos bloqueantes (fecha de lanzamiento, si hay webinar o no, y la fecha y el enlace de la sala si lo hay), esperas a que Adrián los dé. Los no bloqueantes (por ejemplo, un enlace de vídeo) se quedan como `[DATO: ...]` y sigues adelante.
+   Si faltan datos bloqueantes (fecha de lanzamiento, si hay webinar o no, y la fecha y el enlace de la sala si lo hay), esperas a que Adrián los dé. Los no bloqueantes no frenan nada: los correos se escriben completos igualmente y, donde un dato los mejoraría, se deja una **sugerencia** («si sabemos X, ponlo así»). Solo los enlaces que no existan quedan como `[URL: ...]`.
 2. **Análisis previo** → subagente `analista`. Lee el baseline de la división y los aprendizajes recientes, y devuelve un briefing con qué ha funcionado, qué no y los objetivos numéricos para esta versión.
 3. **Calendario** → subagente `planificador`. Construye la secuencia completa con fechas, tipo de correo, enlace principal, audiencia y ángulo de cada envío.
 4. **Redacción** → subagente `redactor`. Escribe todos los correos en texto plano, cada uno con su fecha de envío y dos o tres variantes de asunto.

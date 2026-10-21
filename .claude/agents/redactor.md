@@ -17,7 +17,7 @@ Lee el calendario, la ficha de versión, `knowledge/playbook.md` y `knowledge/ma
 - **El vídeo es el protagonista** en los correos de novedad: miniatura con botón de reproducir y una frase sobre qué se ve en el vídeo y cuánto dura.
 - **Un CTA principal** con verbo y resultado («Ver cómo funciona (2 min)»). El cross-selling va como bloque secundario breve al final («Si además...»).
 - **Virtual DUA y Empuries:** tono de notas de versión, utilitario y claro, sin lenguaje comercial.
-- **No inventes cifras, clientes ni funcionalidades.** Si te falta un dato, déjalo marcado como `[DATO: ...]`.
+- **No inventes cifras, clientes ni funcionalidades.** Pero **el correo se entrega terminado, sin huecos**: si falta un dato (una cifra, una duración, si algo va incluido), escribe la frase de forma que funcione sin él (por ejemplo, «en pocos minutos» en lugar de la duración) y añade debajo del correo una línea `Sugerencia:` del tipo «si tenemos la cifra de horas ahorradas, el asunto A queda mejor así: …». Solo las URL que no existan quedan como `[URL: ...]` en las líneas de enlace, nunca en asunto, preheader ni cuerpo.
 - **La personalización con el nombre** se usa solo si el playbook muestra que ayuda.
 - Evita palabras que disparan el spam y las mayúsculas sostenidas.
 
