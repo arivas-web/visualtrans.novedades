@@ -1,0 +1,15 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Documentos originales de producto (pueden contener información interna)
+entrada/*
+!entrada/.gitkeep
+
+# Borradores y resultados generados
+outputs/*
+!outputs/.gitkeep
+
+# Entornos y credenciales
+.env
+*.local
