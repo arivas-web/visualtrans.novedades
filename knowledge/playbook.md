@@ -1,6 +1,6 @@
 # Playbook – Correos de novedades de versión
 
-Fuente: auditoría de HubSpot del 21/10/2026 (envíos de oct 2025 a oct 2026, métricas sin bots). El analista actualiza este archivo; solo entran aprendizajes de confianza media o alta.
+Fuente: auditoría de HubSpot del 21/10/2026 (envíos de oct 2025 a oct 2026, métricas sin bots). Contraste adicional: exportes de Drive de Adrián (770 correos y 5.000 formularios de ene. 2022 a oct. 2025, sin filtro de bots confirmado), analizados en `outputs/vforwarding-26.3/analisis-drive.md`. El analista actualiza este archivo; solo entran aprendizajes de confianza media o alta.
 
 ## Baseline por tipo de correo
 | Tipo | División / ejemplo | CTR | CTOR |
@@ -28,16 +28,32 @@ Media del portal: CTR ~1,5% y CTOR ~8%.
 2. **Beneficio concreto y vídeo antes que intriga.** Los asuntos con cifra o resultado concreto («H1 un 40% más rápido», «mira cómo funciona») alcanzan un CTOR del 20–28%; las preguntas-gancho («¿Tus márgenes son reales?», «Tienes un nuevo compañero») se quedan en el 7–8%.
 3. **Formato utilitario en bases de usuarios.** En Virtual DUA y Empuries, «Nueva versión disponible» logra un CTR del 11–23% frente al 0,3–1,6% del cross-selling comercial.
 4. **Las invitaciones informativas ganan a las de intriga:** «La versión 26.2 llega el 30 de junio» (2,4%) frente a «Esto es lo que verás» (0,9%).
+   *Revisión del 21/10/2026 (exporte de Drive 2022–2025, `outputs/vforwarding-26.3/analisis-drive.md`): confianza rebajada a **media** hasta comprobar en HubSpot qué posición ocupó cada asunto en 26.2. La regla 7 muestra que la primera invitación gana siempre; en 25.2, la informativa con fecha y BI (posición 2) sacó un 0,97% frente al 5,50% de la de intriga (posición 1). Solo vale comparar asuntos dentro del mismo envío (A/B).*
 5. **La grabación rinde casi como el directo** (2,9% frente a 3,5% de CTR). Es un activo que hay que explotar.
+   *Refuerzo del 21/10/2026 (exporte de Drive): en 4 de 5 parejas de 2023–2025 la grabación rindió entre el 76% y el 139% del directo (formación vForwarding 2023, AES 2023, Verifactu 2025, Ley Antifraude 2025); la excepción es vForwarding 25.2 (56%).*
 6. **Las listas manuales o importadas son un riesgo:** tuvieron entre un 13% y un 31% de rebotes duros, y en junio de 2026 la salud del portal cayó de 84 a 55 por esa causa. Verifactu (noviembre de 2025) tuvo un 22% de rebotes duros.
+7. **La primera invitación de una secuencia es siempre la que más CTR saca; las siguientes caen, sea cual sea el asunto.** Fuente: exporte de Drive 2022–2025 (`outputs/vforwarding-26.3/analisis-drive.md`, apartado 2.1). Ocurre en 8 de 8 secuencias (vForwarding 24.1, 24.2, 25.01, 25.2 y 2023; webinars de Aduanas 2024, consignaciones 2024 y Verifactu 2025). Por ejemplo, 25.01: 2,97% → 2,41% → 1,99% → 1,38%. Consecuencia: los asuntos se comparan solo con A/B dentro del mismo envío, nunca entre invitaciones de distinta posición.
+
+## Reglas (confianza media)
+8. **Los registros al webinar se concentran en el día de la primera invitación y en las últimas 48 horas (víspera y día).** Fuente: formularios del exporte de Drive (`analisis-drive.md`, apartado 2.2). vForwarding 25.2: 29% el día 1 y 39% los dos últimos días (110 registros externos); 24.2: 38% los dos últimos días (123); webinar de factura electrónica 2025: 22% y 35% (345). Las invitaciones del medio aportan poco (25.2, invitación 2: 4%). El recordatorio de la víspera y el correo del día se evalúan también por registros, no solo por CTR.
 
 ## En observación (confianza baja)
 - Personalizar el asunto con el nombre no muestra una mejora clara.
 - En las píldoras de vForwarding 26.1, HubSpot excluyó casi tantos contactos como los entregados. Hay que averiguar si son contactos no comerciales o poco activos.
+- *(Exporte de Drive 2022–2025, 21/10/2026; detalle en `outputs/vforwarding-26.3/analisis-drive.md`.)*
+  - Los asuntos con pregunta tienen menos CTR (mediana del 1,88% frente al 2,53%, 30 frente a 364 correos), pero el mismo CTOR (9,5%): la pregunta resta aperturas, no clics. Es mezcla de tipos de correo.
+  - «Asistente IA» es un gancho flojo: Aduania 4,13% frente al 7,07% de vExtract con la misma base de Suite; en 26.1, 1,23%. Un envío por división.
+  - BI como protagonista de una invitación rinde poco: 25.2, 0,97% (posición 2); nurturing de BI, 1,12–1,37%, en el tercio inferior.
+  - Día y hora: no se ve efecto que se distinga del tipo de correo; el martes no sale mejor que el lunes. «Martes a jueves a las 10:00» es una convención, no una regla con datos.
+  - Emojis en el asunto: sin diferencia (2,40% frente a 2,54% de mediana).
+  - Cross-selling: genérico 0,4–0,9% (workflows «Transitarios S/Solución»); con beneficio concreto y gratis (Aduania), 4,76% sobre 1.743. Pocos casos.
+  - Los webinars normativos (Aduanas, Verifactu) traen más registros en absoluto (345–671 únicos), pero sobre bases de 7.000–8.000; el de novedades de vForwarding 25.2 registra ~11–13% de su base, con un 1% de correos personales.
 
 ## Lagunas de medición
 - Los enlaces no llevan UTM: hoy no se pueden medir las visitas a vídeo ni el cross-selling. Se corrige a partir de la primera versión del agente.
 - No hay correos de The Wall localizados en HubSpot: pendiente de confirmar con qué nombre aparecen.
+- En un A/B de invitación, si A y B llevan el mismo `utm_content`, los registros no se pueden atribuir a cada variante. Hay que añadir la variante (`invitacion-01-landing-a` / `-b`) o un campo oculto en el formulario.
+- El exporte de campañas de HubSpot (informe de rendimiento de todas las campañas) calcula la tasa de clics sobre enviados, no consta que filtre bots y tiene un 8% de envíos grandes con 0 clics (avisos sin enlace o sin medir). No se mezcla con el baseline sin bots.
 
 ## Objetivos para la primera versión gestionada por el agente
 - Píldoras semanales: CTR ≥ 3% y CTOR ≥ 20%.
