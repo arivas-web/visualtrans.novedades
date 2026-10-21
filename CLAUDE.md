@@ -57,8 +57,9 @@ Puedes **proponer** mejoras a esta estructura respaldadas por datos (por ejemplo
 
 ## Convención de UTM
 `utm_source=hubspot&utm_medium=email&utm_campaign={division}-{version}&utm_content={tipo}-{n}-{enlace}`
-- `tipo`: invitacion, recordatorio, dia, sala, lanzamiento, novedad
+- `tipo`: invitacion, recordatorio, dia, sala, lanzamiento, grabacion, novedad
 - `enlace`: video, landing, crosssell-{producto}, sala
+- En los correos con test A/B cuya métrica es una conversión en la landing (registros al webinar), se añade la variante al final: `invitacion-01-landing-a` / `-b`.
 - Ejemplo: `utm_campaign=vforwarding-26.3&utm_content=novedad-02-video`
 
 ## Convención de nombres en HubSpot
