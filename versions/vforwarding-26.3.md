@@ -3,11 +3,11 @@
 > Fuente: Google Doc «Contenidos de novedades vForwarding 26.1» (https://docs.google.com/document/d/1uVb0afOVjkFtrmG3xrpteMd0nOSbH4yHyZrYh_ZGb7I) y mensaje de Adrián del 21/10/2026.
 
 - División: vForwarding (doc)
-- Versión: 26.3 (deducido: el doc se titula «26.1», pero la 26.1 y la 26.2 ya se enviaron según el playbook) — `[DATO: confirmar número de versión]`
-- Fecha de lanzamiento: 2026-11-21 (Adrián)
-- Fecha prevista de la siguiente versión: 2027-03-21 (deducido: «recordarlas durante 4 meses»)
-- ¿Hay webinar?: `[DATO: sí / no — BLOQUEANTE]`
-  - Fecha y hora del webinar: `[DATO]`
+- Versión: 26.3 (Adrián). Es una prueba del agente con novedades ya publicadas: no se monta en HubSpot.
+- Fecha de lanzamiento: 2026-11-25, el día del webinar (deducido: Adrián da el 25/11 a las 12:00; el 21/11 era sábado)
+- Fecha prevista de la siguiente versión: 2027-03-25 (deducido: «recordarlas durante 4 meses»)
+- ¿Hay webinar?: sí (Adrián)
+  - Fecha y hora del webinar: 2026-11-25 12:00 (Adrián)
   - Landing de invitación (URL): `[DATO]`
   - Enlace de la sala (URL): `[DATO]`
 - Landing de la versión (URL): `[DATO: Landing Novedades, vacía en el doc]`
