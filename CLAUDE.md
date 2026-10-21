@@ -27,7 +27,17 @@ Al recibirlo, sin esperar más instrucciones, arrancas el flujo.
 8. **Maquetación HTML** → subagente `maquetador`. Con los textos ya validados, genera un HTML por correo a partir de `knowledge/plantilla-email.html` (look and feel en `knowledge/marca.md`), optimizado para conversión. El `revisor` lo comprueba antes de entregarlo.
    **Entrega 2 (Google Doc + HTML):** creas el Google Doc final con calendario y contenidos y le pasas el enlace, junto con la vista previa de los HTML.
 9. **Montaje:** solo con el OK explícito, el subagente `publicador` crea los correos en HubSpot como **borradores**, con el HTML aprobado, y le entrega a Adrián la lista con la fecha y hora de cada uno. **Adrián los programa y los envía.**
-10. **Aprendizaje:** tras cada envío (y cada lunes durante el bucle semanal), el `analista` lee los resultados y actualiza `knowledge/playbook.md`.
+10. **Mejora continua** → subagente `optimizador`, 48 horas después de cada envío y en la rutina de los lunes. Ver «Bucle de mejora continua».
+
+## Bucle de mejora continua
+Cada correo tiene que partir del mejor resultado conocido y probar una cosa nueva. El ciclo, tras cada envío:
+1. **Medir:** el `optimizador` lee en HubSpot (solo lectura) los resultados de cada variante y de cada enlace.
+2. **Decidir:** acumula los envíos del experimento abierto y decide con `scripts/ab_test.py` (reglas en `knowledge/experimentos.md`): gana B, gana A, tendencia (se repite) o empate (se cierra).
+3. **Aprender:** lo que gana con confianza alta pasa a `knowledge/playbook.md`; las tendencias, a «En observación».
+4. **Iterar:** reescribe los dos próximos correos no enviados: la variante A es el campeón vigente y la B, el siguiente retador de la cola de hipótesis. Una sola variable cada vez.
+5. **Proponer:** le cuenta a Adrián en pocas líneas qué ha ganado, por cuánto y qué cambia en los siguientes correos. Si hay que actualizar un borrador de HubSpot, pide el OK; **Adrián sigue programando y enviando**.
+Además, dentro de cada envío, el test A/B de HubSpot se configura con envío automático del ganador (ver `publicador`), para que la mayor parte de la lista reciba ya la mejor variante.
+Frenos: más de un 0,3% de bajas o un 0,5% de rebotes duros paran el experimento hasta que Adrián decida.
 
 ## Estructura de las secuencias (reglas fijas de Adrián)
 **Con webinar**
@@ -69,6 +79,8 @@ Puedes **proponer** mejoras a esta estructura respaldadas por datos (por ejemplo
 - `knowledge/playbook.md`: baseline y aprendizajes. La fuente de verdad para decidir.
 - `knowledge/marca.md`: tono, look and feel del email y datos de HubSpot (guía de marca completa pendiente).
 - `knowledge/plantilla-email.html`: plantilla HTML de los correos.
+- `knowledge/experimentos.md`: experimentos abiertos y cerrados, campeón vigente y cola de hipótesis.
+- `scripts/ab_test.py`: decisión estadística de los A/B con los envíos acumulados.
 - `entrada/`: documentos originales que pasa Adrián (no se modifican).
 - `versions/`: una ficha por versión, generada por el extractor a partir del documento.
 - `outputs/<division>-<version>/`: calendario, borradores, `html/` y resultados.
