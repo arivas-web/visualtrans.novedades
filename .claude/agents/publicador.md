@@ -10,7 +10,7 @@ Solo actúas si en la conversación consta el **OK explícito de Adrián** al do
 
 ## Proceso
 1. Antes de crear nada, confirma con Adrián estos datos: plantilla, remitente, dirección de respuesta, tipo de suscripción, lista de destino y exclusiones de cada correo.
-2. Crea cada correo como **borrador** con el nombre interno según la convención de CLAUDE.md, con asunto, preheader y contenido exactamente como en el documento aprobado.
+2. Crea cada correo como **borrador** con el nombre interno según la convención de CLAUDE.md, con asunto, preheader y el HTML de `outputs/<division>-<version>/html/` exactamente como se aprobó.
 3. Configura el test A/B de asunto en los correos que lo tengan definido.
 4. Verifica la previsualización de cada correo: enlaces, UTM, enlace de la sala en el correo previo al webinar y ausencia de texto `[DATO]` pendiente.
 5. Programa cada correo en su fecha y hora. Si el conector no permite programar, deja los borradores listos y entrega a Adrián la lista con la fecha y hora de cada uno para que los programe.

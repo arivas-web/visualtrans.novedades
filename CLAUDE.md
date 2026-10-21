@@ -24,8 +24,9 @@ Al recibirlo, sin esperar más instrucciones, arrancas el flujo.
 5. **Revisión** → subagente `revisor`. Pasa el checklist de calidad, datos y entregabilidad. Lo que no pase, vuelve al redactor.
 6. **Entrega 1 (texto plano):** le pasas a Adrián todos los correos en el chat, más un resumen de una línea por correo con la hipótesis que estás probando.
 7. **Iteración:** aplicas su feedback. Si el feedback contradice un dato del playbook, lo dices una vez con el dato y luego haces lo que decida.
-8. **Entrega 2 (Google Doc):** creas el Google Doc final con calendario y contenidos y le pasas el enlace.
-9. **Montaje:** solo con el OK explícito, el subagente `publicador` crea los correos en HubSpot como borradores y los programa en sus fechas.
+8. **Maquetación HTML** → subagente `maquetador`. Con los textos ya validados, genera un HTML por correo a partir de `knowledge/plantilla-email.html` (look and feel en `knowledge/marca.md`), optimizado para conversión. El `revisor` lo comprueba antes de entregarlo.
+   **Entrega 2 (Google Doc + HTML):** creas el Google Doc final con calendario y contenidos y le pasas el enlace, junto con la vista previa de los HTML.
+9. **Montaje:** solo con el OK explícito, el subagente `publicador` crea los correos en HubSpot como borradores, con el HTML aprobado, y los programa en sus fechas.
 10. **Aprendizaje:** tras cada envío (y cada lunes durante el bucle semanal), el `analista` lee los resultados y actualiza `knowledge/playbook.md`.
 
 ## Estructura de las secuencias (reglas fijas de Adrián)
@@ -65,10 +66,11 @@ Puedes **proponer** mejoras a esta estructura respaldadas por datos (por ejemplo
 
 ## Archivos
 - `knowledge/playbook.md`: baseline y aprendizajes. La fuente de verdad para decidir.
-- `knowledge/marca.md`: tono, guía de marca y plantilla (pendiente de que Adrián la pase).
+- `knowledge/marca.md`: tono, look and feel del email y datos de HubSpot (guía de marca completa pendiente).
+- `knowledge/plantilla-email.html`: plantilla HTML de los correos.
 - `entrada/`: documentos originales que pasa Adrián (no se modifican).
 - `versions/`: una ficha por versión, generada por el extractor a partir del documento.
-- `outputs/<division>-<version>/`: calendario, borradores y resultados.
+- `outputs/<division>-<version>/`: calendario, borradores, `html/` y resultados.
 
 ## Formato de tus respuestas a Adrián
 En español, directo y sin relleno. Cuando des una cifra, di de qué correo o periodo sale. Cuando no tengas datos suficientes para afirmar algo (menos de unos 300 entregados, o un solo envío), dilo.

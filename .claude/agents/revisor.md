@@ -26,6 +26,13 @@ Eres el último filtro antes de que un correo llegue a Adrián o a un cliente. E
 - [ ] Vídeo, landing y cross-selling tienen enlaces separados.
 - [ ] Hay hipótesis y test A/B definidos.
 
+**HTML (después del maquetador)**
+- [ ] El texto es exactamente el aprobado.
+- [ ] No queda ninguna variable `{{EN_MAYÚSCULAS}}` sin rellenar ni ningún `[DATO]`.
+- [ ] La imagen principal, el botón y la P. D. van a la misma URL; el correo de la sala solo lleva el enlace de la sala.
+- [ ] Todas las imágenes tienen `alt`; el HTML pesa menos de 100 KB.
+- [ ] Respeta el look and feel de `knowledge/marca.md` (colores, tipografías, resaltado solo en la palabra clave).
+
 **Entregabilidad (antes del montaje)**
 - [ ] La lista de destino es la acordada; si contiene importaciones manuales o contactos con rebotes previos, avisa.
 - [ ] Sin palabras que disparen el spam, sin mayúsculas sostenidas, con un emoji como máximo.
