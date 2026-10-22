@@ -2,7 +2,7 @@
 """Decide un test A/B (campeón frente a retador) con los datos acumulados de uno o varios envíos.
 
 Uso:
-  python3 scripts/ab_test.py --a 1450:31 --b 1440:52 [--a 1300:20 --b 1310:35 ...] [--metrica CTR]
+  python3 scripts/ab_test.py --a 1450:31 --b 1440:52 [--a 1300:20 --b 1310:35 ...] [--metrica CTR] [--max-envios 8]
 
 Cada --a / --b es «entregados:conversiones» de un envío (clics únicos para CTR, registros para
 registros). Se suman todos los envíos del mismo experimento.
@@ -54,7 +54,7 @@ def z_test(a, b):
     return z, p_valor
 
 
-def decidir(a, b, envios):
+def decidir(a, b, envios, max_envios=MAX_ENVIOS):
     (ea, ca), (eb, cb) = a, b
     ta, tb = ca / ea, cb / eb
     mejora = (tb - ta) / ta if ta else float("inf")
@@ -65,7 +65,7 @@ def decidir(a, b, envios):
         return prob, mejora, "GANA B: el retador pasa a campeón"
     if prob <= 1 - PROB_GANADOR and tb and (ta - tb) / tb >= MEJORA_MINIMA:
         return prob, mejora, "GANA A: el campeón se mantiene y el retador se descarta"
-    if envios >= MAX_ENVIOS:
+    if envios >= max_envios:
         return prob, mejora, "EMPATE: se cierra sin cambio y se prueba otra variable"
     if prob >= PROB_TENDENCIA or prob <= 1 - PROB_TENDENCIA:
         return prob, mejora, "TENDENCIA: se repite el mismo par en el siguiente envío"
@@ -77,12 +77,14 @@ def main():
     ap.add_argument("--a", action="append", required=True, help="entregados:conversiones del campeón")
     ap.add_argument("--b", action="append", required=True, help="entregados:conversiones del retador")
     ap.add_argument("--metrica", default="CTR")
+    ap.add_argument("--max-envios", type=int, default=MAX_ENVIOS,
+                    help="envíos tras los que se cierra en empate (excepción para bases pequeñas, ver experimentos.md)")
     args = ap.parse_args()
     if len(args.a) != len(args.b):
         ap.error("hace falta el mismo número de envíos para A y para B")
 
     a, b = parse(args.a), parse(args.b)
-    prob, mejora, decision = decidir(a, b, len(args.a))
+    prob, mejora, decision = decidir(a, b, len(args.a), args.max_envios)
     z, p_valor = z_test(a, b)
     print(f"Envíos acumulados: {len(args.a)}")
     print(f"A (campeón): {a[1]}/{a[0]} = {a[1] / a[0]:.2%} {args.metrica}")

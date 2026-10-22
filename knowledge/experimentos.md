@@ -20,8 +20,19 @@ Registro vivo de los test A/B. Lo mantiene el subagente `optimizador` después d
 ## Experimentos abiertos
 | ID | Variable | Campeón (A) | Retador (B) | Tipo de correo | Envíos | A entreg./conv. | B entreg./conv. | P(B mejor) | Estado |
 |---|---|---|---|---|---|---|---|---|---|
-| E01 | Asunto de invitación | Fecha y hora + novedad protagonista | Fecha y hora + «todas las novedades» | invitacion (métrica: registros) | 0 | — | — | — | Abierto (vForwarding 26.3 #01–#04) |
+| E01 | Asunto de invitación | Fecha y hora + novedad protagonista | Fecha y hora + «todas las novedades» | invitacion (métrica: registros) | 0 | — | — | — | Abierto (vForwarding 26.3 #01–#04, que no se envía; DeiWorld #01–#03) |
+| E03 | Cuerpo de píldora | Narrativo estándar (60–120 palabras) | Corto (≤ 60 palabras): problema en una frase, resultado y botón | novedad (métrica: CTR por clics únicos) | 0 | — | — | — | Abierto (DeiWorld #07–#14) |
 | E02 | Asunto de píldora | Resultado concreto + «mira cómo funciona» | Pregunta-gancho | novedad | 0 | — | — | — | Abierto (vForwarding 26.3 #10 en adelante) |
+
+## Plan registrado antes de enviar: DeiWorld, webinar del 5/11/2026
+Se escribe antes del primer envío y no se cambia después de ver datos.
+- **Base:** unos 75 contactos (lista de Adrián). Reparto 50/50 sobre toda la lista en cada envío, **sin ganador automático** (la fase de prueba serían ~15 personas). HubSpot reasigna en cada envío.
+- **E01 (#01, #02 y #03):** solo cambia el asunto. Métrica que decide: clics únicos a la landing; los registros por variante (UTM `-a`/`-b`) acompañan, porque se esperan unos 9. El #04 no entra: su asunto ya es «las cuatro novedades».
+- **E03 (#07 a #14):** solo cambia el cuerpo. Asunto, preheader, botón, vídeo y P. D. idénticos en A y B. Métrica que decide: CTR por clics únicos; los clics al vídeo acompañan.
+- **Excepción a la regla 4:** con 37 entregados por variante y envío, el mínimo de 300 por variante solo se alcanza con 8 envíos. E03 se evalúa con `--max-envios 8`; E01 nunca llegará al mínimo y se registra como tendencia, como mucho.
+- **Qué puede detectar (simulación, 22/10/2026):** con 8 envíos sumados, si B dobla el CTR de A (6% → 12%), se declara ganador un 81% de las veces; si lo mejora un 50% (6% → 9%), solo un 41%. Es optimista: las 75 personas se repiten en cada envío. Diferencias pequeñas no se verán.
+- **Limpieza:** clics sin bots, descontando contactos internos.
+- **Uso para los siguientes eventos:** lo que gane con confianza alta pasa al playbook; lo demás, a «En observación», a la espera de repetir el mismo par en una base mayor.
 
 ## Cola de hipótesis (siguiente retador cuando se cierre un experimento)
 Ordenadas por impacto esperado según el playbook. El `optimizador` coge la primera que aplique al tipo de correo.
