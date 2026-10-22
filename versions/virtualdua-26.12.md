@@ -33,7 +33,7 @@ Ordenadas por potencial de email.
 - Notas para el redactor:
   - Es un **borrador** que el usuario revisa: «La responsabilidad sobre la declaración sigue siendo tuya». No prometer que el DUA se hace solo ni que no hay errores. Lo que no viene en el documento (incoterm, bultos) queda vacío: «no se inventa». (doc)
   - Ubicación: botón **DUAS PDF**; tres opciones: actualizar datos, actualizar partidas, añadir partidas. (doc)
-  - Activación (doc): «se activa con la actualización de versión», pero el CTA de la landing es «Escríbenos para probarlo» (mailto a soporte con asunto «Quiero probar vExtract en Virtual DUA») y dice «lo ponemos en marcha». **Ambiguo**: ¿está incluido para todos sin coste o requiere alta, activación por soporte o contratación? No prometer «incluido» ni «gratis» hasta confirmarlo.
+  - Activación (doc): «se activa con la actualización de versión», pero el CTA de la landing es «Escríbenos para probarlo» (mailto a soporte con asunto «Quiero probar vExtract en Virtual DUA») y dice «lo ponemos en marcha». **Confirmado por Adrián (22/10/2026): vExtract es de pago, hay que contratarlo, y tiene prueba gratuita.** El CTA es pedir la prueba gratuita. No decir «incluido» ni que viene con la actualización; sí se puede decir «pruébalo gratis».
   - El nombre interno «vExtract» sí aparece de cara al cliente en la landing (en negrita); se puede usar como nombre de marca, pero el título debe ir en beneficio.
 
 ### Novedad 2
@@ -76,6 +76,6 @@ Ordenadas por potencial de email.
 - Fecha del material: `month_year: "Octubre 2026"` frente a un lanzamiento el 5/11/2026. Revisar las landings antes de publicarlas.
 - URL del histórico en la ruta de Empuries (`/productos/empuries/novedades/`). No usarla en los correos de Virtual DUA sin confirmarlo.
 - Landings sin publicar: ningún correo puede enlazar a ellas hasta tener la URL. Quedan como `[URL: ...]`.
-- vExtract: activación o condiciones comerciales ambiguas (ver Novedad 1). No prometer «incluido» ni «sin coste».
+- vExtract: se contrata aparte y tiene prueba gratuita (confirmado por Adrián). CTA = pedir la prueba gratuita; nunca «incluido».
 - Justificativos: no animar a enviar lotes grandes (recomendación de lotes pequeños por fecha).
 - Sin cambios normativos con fecha obligatoria en esta versión.
