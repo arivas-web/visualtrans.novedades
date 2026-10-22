@@ -5,12 +5,12 @@
 
 - División / producto: DeiWorld (Adrián). **Aviso:** no es una de las cinco divisiones de CLAUDE.md (Virtual DUA, Empuries, vForwarding, Suite, The Wall) ni figura en `knowledge/marca.md`. No hay baseline propio en `knowledge/playbook.md`: el analista tendrá que usar la media del portal (CTR ~1,5%, CTOR ~8%) y los baselines por tipo de correo de otras divisiones como referencia, avisando de que no son de DeiWorld. Escritura: «DeiWorld».
 - Versión: `[DATO: número de versión]`. El documento no la menciona.
-- Fecha de lanzamiento: 2026-11-05, el día del webinar (deducido: Adrián no la da; confirmar si la versión se libera ese día o en otra fecha).
+- Fecha de lanzamiento: 2026-11-05, el día del webinar (Adrián, 22/10).
 - Fecha prevista de la siguiente versión: `[DATO]`. Sin ella no se sabe cuántas semanas dura el ciclo de novedades.
 - ¿Hay webinar?: sí (doc y Adrián)
-  - Fecha y hora del webinar: 2026-11-05, jueves (doc). Hora: `[DATO]`
-  - Landing de invitación (URL): `[DATO]`
-  - Enlace de la sala (URL): `[DATO]`
+  - Fecha y hora del webinar: 2026-11-05, jueves, 12:00 (Adrián, 22/10)
+  - Landing de invitación (URL): `[URL: landing de invitación]` (Adrián: aún no hay URL)
+  - Enlace de la sala (URL): `[URL: sala]` (Adrián: aún no hay URL)
 - Landing de la versión (URL): `[DATO]`
 - Lista(s) de destino en HubSpot: `[DATO: las decide Adrián]`
 - Exclusiones: `[DATO: las decide Adrián]`
@@ -19,7 +19,7 @@
   - dos correos la semana del 26 al 30 de octubre (en lugar de 4 invitaciones semanales: con 14 días hasta el webinar no caben);
   - uno para el 4 de noviembre (equivale al recordatorio del día anterior);
   - los del mismo día del evento (mañana y sala 5–10 minutos antes);
-  - todos los posteriores de novedades, **con dos correos por novedad** (no uno por semana). Ver dudas: ¿dos ángulos distintos de la misma novedad? ¿en semanas consecutivas?
+  - todos los posteriores de novedades, **con dos correos por novedad** (no uno por semana). **Resuelto (Adrián, 22/10):** dos correos con ángulo distinto por novedad, en semanas diferentes, uno por semana (8 correos de novedad: primera vuelta presenta las 4, segunda vuelta vuelve a ellas con otro ángulo).
 - Idea central: `[DATO]`. El doc no trae lema. Hilo común deducido de las cuatro novedades: menos tecleo y más control de la operativa diaria (deducido).
 - Tema común: las cuatro novedades se presentan como funciones de IA (doc). El playbook tiene en observación (confianza baja) que «Asistente IA» como gancho rinde poco (Aduania 4,13% frente a 7,07% de vExtract en Suite; 1,23% en vForwarding 26.1). **El copy vende el resultado, no la palabra IA.**
 
