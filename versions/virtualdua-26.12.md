@@ -1,10 +1,11 @@
 # Ficha de versión
 
-> Fuente: paquete `entrada/virtualdua-26.12/` (datos.json + landings HTML en `build/`: `novedades.html` y una por novedad) y mensaje de Adrián del 22/10/2026 (sin webinar; lanzamiento el 5/11/2026).
+> Fuente: paquete `entrada/virtualdua-26.12/` (datos.json + landings HTML en `build/`: `novedades.html` y una por novedad) y mensaje de Adrián del 22/10/2026 (sin webinar; lanzamiento el 5/11/2026; corregido por Adrián el mismo día: **jueves 29/10/2026**, y el correo de lanzamiento lleva el enlace de descarga del instalador).
 
 - División: Virtual DUA (doc)
 - Versión: 26.12 (doc)
-- Fecha de lanzamiento: 2026-11-05 (Adrián). Ojo: el datos.json pone `month_year: "Octubre 2026"` y ese texto puede aparecer en las landings; hay que corregirlo a noviembre o quitarlo antes de publicarlas.
+- Fecha de lanzamiento: 2026-10-29, jueves (Adrián). Coincide con el «Octubre 2026» del material.
+- Descarga: el correo de lanzamiento incluye el enlace de descarga del instalador ([URL: descarga instalador Virtual DUA 26.12]) (Adrián).
 - Fecha prevista de la siguiente versión: `[DATO]` (no aparece en el material)
 - ¿Hay webinar?: no (Adrián)
   - Fecha y hora del webinar: no aplica
@@ -73,7 +74,7 @@ Ordenadas por potencial de email.
 - Nada descartado: las cuatro novedades tienen impacto para el usuario. El material no incluye correcciones de errores ni cambios internos.
 
 ## Avisos
-- Fecha del material: `month_year: "Octubre 2026"` frente a un lanzamiento el 5/11/2026. Revisar las landings antes de publicarlas.
+- Fecha del material: «Octubre 2026», coherente con el lanzamiento del 29/10/2026. Resuelto.
 - URL del histórico en la ruta de Empuries (`/productos/empuries/novedades/`). No usarla en los correos de Virtual DUA sin confirmarlo.
 - Landings sin publicar: ningún correo puede enlazar a ellas hasta tener la URL. Quedan como `[URL: ...]`.
 - vExtract: se contrata aparte. No mencionar prueba gratuita ni «incluido»: solo «si quieres probarlo o tenerlo, habla con tu comercial» + enlace a la landing de vExtract.
