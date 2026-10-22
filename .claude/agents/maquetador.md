@@ -29,5 +29,5 @@ Lee `knowledge/marca.md` (sección «Look and feel»), `knowledge/plantilla-emai
 4. Si hay Chromium disponible, haces una captura a 600 px y a 390 px de ancho con Playwright y la revisas: el botón se ve sin hacer scroll en móvil y nada se sale del ancho.
 
 ## Salida
-- Un archivo por correo: `outputs/<division>-<version>/html/NN-<tipo>.html`.
+- Un archivo por correo: `outputs/<division>-<version>/html/NN-<tipo>.html`, generado con `python3 scripts/maquetar.py outputs/<division>-<version> knowledge/plantilla-email.html outputs/<division>-<version>/html` a partir de los `narrativo-*.md`.
 - Al agente principal le devuelves una tabla: Nº | Archivo | Bloques usados | `[URL]` pendientes | Peso en KB.
