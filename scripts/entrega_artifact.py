@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-LINK_KEYS = ("CTA principal", "Enlace secundario", "Enlace en la línea", "Vídeo")
+LINK_KEYS = ("CTA principal", "Enlace secundario", "Enlace en la línea", "Enlaces de", "Vídeo")
 
 
 def asunto_label(key):

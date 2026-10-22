@@ -17,7 +17,7 @@
 - Contacto que figura en las landings (doc): soporte@visualtrans.com
 - Lista(s) de destino en HubSpot: `[DATO]` (lo decide Adrián)
 - Exclusiones: `[DATO]` (lo decide Adrián)
-- Vídeos: ninguno en el material (doc). `[DATO: vídeo de cada novedad]`
+
 - Idea central (doc): «Menos pasos manuales, más control en cada expediente.» Entradilla: «Virtual DUA lee tus facturas con IA, te trae el ARC de EMCS a la pantalla y simplifica el pago de tributos y los justificativos.»
 
 ## Novedades
@@ -29,7 +29,7 @@ Ordenadas por potencial de email.
 - Problema que resuelve / beneficio: elimina copiar a mano número y fecha de factura, importes, contenedor, bultos y pesos, y agrupar partidas con calculadora. Es lo que más tiempo consume y donde se cuelan errores de transcripción. «Si el expediente tiene 13 líneas o 60, tu esfuerzo es el mismo: revisar el resultado.» Funciona con distintos formatos de factura sin configurar plantillas previas. Avisa si la factura ya está en otro expediente. (doc) Única cifra del material: el ejemplo ilustrativo «13 líneas → 10 partidas» (doc, es un ejemplo, no un dato de ahorro). Cifra de ahorro: `[DATO: tiempo ahorrado por expediente]`
 - A quién afecta: todos los usuarios que tramitan DUAs a partir de facturas y packing lists, sobre todo tramitadores y operaciones y quien trabaja con muchos proveedores (doc: sección «Para quién»). Horizontal dentro de la base (deducido).
 - Potencial de email: alto (horizontal, muy visual y demostrable en vídeo: PDF → partidas)
-- Vídeo (URL y duración): `[DATO]`
+- Vídeo: no hay (Adrián, 22/10/2026). El CTA va a la landing de la novedad.
 - Producto de otra división que encaja para cross-selling: no evidente. vForwarding tiene una función parecida de digitalización con IA, pero es para transitarios y no es un cross-sell claro (deducido). Por regla actual, cross-selling «todo a todos».
 - Notas para el redactor:
   - Es un **borrador** que el usuario revisa: «La responsabilidad sobre la declaración sigue siendo tuya». No prometer que el DUA se hace solo ni que no hay errores. Lo que no viene en el documento (incoterm, bultos) queda vacío: «no se inventa». (doc)
@@ -43,7 +43,7 @@ Ordenadas por potencial de email.
 - Problema que resuelve / beneficio: antes era DUA a DUA y partida a partida; con cientos de DUAs pendientes era «inabarcable». Ahora, «en unos pocos clics». (doc) Cifra de ahorro: `[DATO: tiempo ahorrado por lote]`. La única cifra del material es técnica: la AEAT admite hasta 999 MRN a la vez (doc).
 - A quién afecta: segmento: tramitadores de importación con DUAs pendientes de justificativo posterior al levante, sobre todo los que acumulan volumen (deducido).
 - Potencial de email: medio (nicho, pero muy alto valor para quien lo sufre; demostrable en vídeo)
-- Vídeo (URL y duración): `[DATO]`
+- Vídeo: no hay (Adrián, 22/10/2026). El CTA va a la landing de la novedad.
 - Producto de otra división que encaja para cross-selling: no evidente.
 - Notas para el redactor:
   - Recomendación de producto: lotes pequeños divididos por fecha; con demasiados MRN de golpe la respuesta de la AEAT puede tardar mucho. No vender «999 de golpe». (doc)
@@ -56,7 +56,7 @@ Ordenadas por potencial de email.
 - Problema que resuelve / beneficio: antes se aplicaba a todos el método de la cabecera y la garantía podía no llegar a la aduana; ahora ningún tributo sale sin garantizar. Evita un error, no ahorra tiempo. (doc)
 - A quién afecta: segmento: tramitadores de importación que combinan garantía y pago previo en un mismo DUA (doc: «Para quién»). Afecta al H1 (importación).
 - Potencial de email: medio (nicho; ángulo de «error que evita»; poco vistoso en vídeo)
-- Vídeo (URL y duración): `[DATO]`
+- Vídeo: no hay (Adrián, 22/10/2026). El CTA va a la landing de la novedad.
 - Producto de otra división que encaja para cross-selling: no evidente.
 - Notas para el redactor: no prometer nada sobre la aceptación por la aduana más allá de «el H1 envía cada tributo con su método». No hay cifras.
 
@@ -66,7 +66,7 @@ Ordenadas por potencial de email.
 - Problema que resuelve / beneficio: evita salir del programa y entrar en la Sede Electrónica de la AEAT en cada envío para descargarlo. (doc) Sin cifra.
 - A quién afecta: segmento: usuarios del módulo EMCS (impuestos especiales), envíos internos e intracomunitarios (doc + deducido).
 - Potencial de email: bajo-medio (nicho y mejora de un clic; mejor como bloque dentro de otro correo o en el de «ya disponible» que como píldora propia, salvo para la base EMCS)
-- Vídeo (URL y duración): `[DATO]`
+- Vídeo: no hay (Adrián, 22/10/2026). El CTA va a la landing de la novedad.
 - Producto de otra división que encaja para cross-selling: no evidente.
 - Notas para el redactor: si el documento no está aceptado, no cambia nada (sigue la impresión por programa). Funciona igual que en Exportación cuando se recibe el circuito del DUA. (doc)
 
