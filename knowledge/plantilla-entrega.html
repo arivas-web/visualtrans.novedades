@@ -1,0 +1,255 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Plantilla fija de la entrega de cada versión (Adrián, 22/10/2026). Orden: cabecera, objetivos, datos anteriores, calendario, test A/B, correos, pendiente, riesgos.
+   Layout: columna de lectura de 1080px; las tablas ruedan dentro de su caja; los correos son tarjetas tipo email con su ficha de medición debajo. */
+:root{
+  --bg:#F6F6F6; --surface:#FFFFFF; --band:#E1F1FB; --ink:#14212B; --text:#2B2B2B; --muted:#5D6B78;
+  --line:#DCE3EA; --blue:#4A6B85; --orange:#F15A24; --orange-ink:#FFFFFF; --mark:#FDE7A6; --mark-ink:#14212B;
+  --ok:#2F7D4F; --warn:#A86A00; --crit:#B3261E; --chip:#EEF3F7;
+  --display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --body:Inter, "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F171E; --surface:#16212B; --band:#1B2C3A; --ink:#EAF1F7; --text:#D3DCE4; --muted:#93A3B2;
+  --line:#2A3946; --blue:#8DB3D3; --orange:#FF7A47; --orange-ink:#1A0E08; --mark:#5A4A16; --mark-ink:#FCEFC7;
+  --ok:#6CC08F; --warn:#E3A93D; --crit:#F07A72; --chip:#1E2C38; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F171E; --surface:#16212B; --band:#1B2C3A; --ink:#EAF1F7; --text:#D3DCE4; --muted:#93A3B2;
+  --line:#2A3946; --blue:#8DB3D3; --orange:#FF7A47; --orange-ink:#1A0E08; --mark:#5A4A16; --mark-ink:#FCEFC7;
+  --ok:#6CC08F; --warn:#E3A93D; --crit:#F07A72; --chip:#1E2C38; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.hero{background:var(--band);border-bottom:1px solid var(--line)}
+header.hero .wrap{padding-block:36px 28px;display:grid;gap:14px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+h1,h2,h3{font-family:var(--display);color:var(--ink);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.1;font-weight:600}
+h1 em{font-style:italic;font-weight:400;color:var(--blue)}
+h2{font-size:26px;font-weight:600;line-height:1.2}
+h3{font-size:19px;font-weight:600;line-height:1.3}
+.lede{max-width:68ch;color:var(--text);margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:6px 10px;font-size:13px}
+.fact b{color:var(--ink);font-weight:600}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:8px}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--muted);font-weight:500;font-size:13px;padding:6px 10px;border-radius:4px}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--ink);background:var(--chip);outline:none}
+main .wrap{display:grid;gap:56px;padding-block:36px 72px}
+section{display:grid;gap:16px;scroll-margin-top:60px;min-width:0}
+.sec-head{display:grid;gap:6px}
+.sec-head p{margin:0;color:var(--muted);max-width:72ch}
+.note{border-left:3px solid var(--warn);background:var(--surface);padding:10px 14px;border-radius:0 4px 4px 0;font-size:14px}
+.note b{color:var(--ink)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase;background:var(--chip)}
+tr:last-child td{border-bottom:0}
+td.num{white-space:nowrap}
+td strong{color:var(--ink)}
+.src{font-size:12px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:8px;min-width:0}
+.panel ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.tag{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:3px;background:var(--chip);color:var(--muted);white-space:nowrap}
+.tag.good{color:var(--ok)} .tag.bad{color:var(--crit)} .tag.ab{color:var(--orange)}
+.month{font:600 13px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--blue);padding-top:6px}
+.cal-row{cursor:pointer}
+.cal-row:hover td{background:var(--chip)}
+.cal-row:focus-visible{outline:2px solid var(--orange);outline-offset:-2px}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button{font:500 13px var(--body);border:1px solid var(--line);background:var(--surface);color:var(--text);padding:6px 11px;border-radius:20px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters button:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.mails{display:grid;gap:28px}
+article.mail{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr);gap:20px;align-items:start;scroll-margin-top:60px}
+@media (max-width:900px){article.mail{grid-template-columns:minmax(0,1fr)}}
+.mail-card{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;min-width:0}
+.mail-top{background:var(--band);padding:12px 18px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
+.mail-num{font:600 13px var(--mono);color:var(--blue)}
+.mail-date{font-weight:600;color:var(--ink)}
+.subjects{padding:14px 18px;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.subj{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:baseline}
+.subj .k{font:600 11px var(--mono);color:var(--muted);min-width:22px}
+.subj .v{color:var(--ink);font-weight:600}
+.pre{font-size:13.5px;color:var(--muted)}
+.mail-body{padding:20px 22px 22px;display:grid;gap:12px}
+.mail-body h3{font-size:22px}
+.mail-body p{margin:0;max-width:62ch}
+.mail-body ol{margin:0;padding-left:20px;display:grid;gap:8px}
+.btn{justify-self:start;background:var(--orange);color:var(--orange-ink);font-weight:700;padding:10px 18px;border-radius:3px;font-size:14px}
+.sec-link{font-size:14px;color:var(--blue);text-decoration:underline}
+.ps{font-size:14px;color:var(--text);border-top:1px dashed var(--line);padding-top:10px}
+.xsell{margin:0 22px 20px;padding:12px 14px;background:var(--chip);border-radius:4px;font-size:14px}
+.xsell b{color:var(--ink)}
+.sign{font-size:14px;color:var(--muted)}
+.side{display:grid;gap:12px;min-width:0}
+.side .panel{padding:14px 16px}
+.kv{display:grid;gap:2px}
+.kv .k{font:600 11px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kv .v{font-size:14px;color:var(--text)}
+.mono{font-family:var(--mono);font-size:12px;word-break:break-all;color:var(--text)}
+details{border-top:1px solid var(--line);padding-top:8px}
+summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--ink)}
+details ul{margin:8px 0 0;padding-left:18px;display:grid;gap:8px;font-size:13px}
+.copy{justify-self:start;font:600 13px var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 12px;border-radius:4px;cursor:pointer}
+.copy:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.copied{color:var(--ok)}
+.pend{display:grid;gap:10px;counter-reset:p;margin:0;padding:0;list-style:none}
+.pend li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px 12px 46px;position:relative}
+.pend li::before{counter-increment:p;content:counter(p);position:absolute;left:14px;top:12px;font:600 13px var(--mono);color:var(--orange)}
+.pend li b{color:var(--ink)}
+.small-list{margin:0;padding-left:18px;display:grid;gap:6px}
+mark{background:var(--mark);color:var(--mark-ink);padding:0 2px}
+footer{color:var(--muted);font-size:12.5px;padding-block:0 40px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+<header class="hero"><div class="wrap" id="hero"></div></header>
+<nav class="toc" aria-label="Secciones"><div class="wrap">
+  <a href="#objetivos">Objetivos</a><a href="#datos">Datos anteriores</a><a href="#calendario">Calendario</a><a href="#ab">Test A/B</a><a href="#correos">Correos</a><a href="#pendiente">Pendiente</a><a href="#riesgos">Riesgos de lista</a>
+</div></nav>
+<main><div class="wrap">
+  <section id="objetivos"></section>
+  <section id="datos"></section>
+  <section id="calendario"></section>
+  <section id="ab"></section>
+  <section id="correos"></section>
+  <section id="pendiente"></section>
+  <section id="riesgos"></section>
+</div></main>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/`([^`]+)`/g, '<span class="mono">$1</span>');
+const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+const DIAS = ["dom","lun","mar","mié","jue","vie","sáb"];
+const fdate = iso => { const d = new Date(iso.slice(0,10)+"T12:00:00"); return `${DIAS[d.getDay()]} ${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}/${d.getFullYear()}`; };
+const monthKey = iso => iso.slice(0,7);
+const monthName = k => { const [y,m] = k.split("-"); return `${MESES[+m-1]} ${y}`; };
+const table = (cols, rows) => `<div class="tbl"><table><thead><tr>${cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td class="${i>0&&/^[≥<\d~≈−-]/.test(String(c))?"num":""}">${md(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+const D = DATA;
+
+// Cabecera
+$("#hero").innerHTML = `
+  <div class="eyebrow">Novedades de versión · ${esc(D.division)}</div>
+  <h1>${esc(D.division)} <em>${esc(D.version)}</em></h1>
+  <p class="lede">${md(D.resumen)}</p>
+  <div class="facts">${D.hechos.map(([k,v])=>`<span class="fact">${esc(k)}: <b>${esc(v)}</b></span>`).join("")}<span class="fact">Correos: <b>${D.correos.length}</b></span><span class="fact">Periodo: <b>${fdate(D.correos[0].fecha)} → ${fdate(D.correos[D.correos.length-1].fecha)}</b></span></div>
+  ${D.aviso ? `<div class="note">${md(D.aviso)}</div>` : ""}`;
+
+// Objetivos
+$("#objetivos").innerHTML = `<div class="sec-head"><div class="eyebrow">1 · Objetivos</div><h2>Qué tiene que conseguir cada tipo de correo</h2><p>${md(D.objetivos.intro)}</p></div>
+  ${table(D.objetivos.cols, D.objetivos.filas)}
+  ${D.objetivos.notas?.length ? `<div class="panel"><ul>${D.objetivos.notas.map(n=>`<li>${md(n)}</li>`).join("")}</ul></div>` : ""}`;
+
+// Datos anteriores
+$("#datos").innerHTML = `<div class="sec-head"><div class="eyebrow">2 · Datos anteriores</div><h2>De dónde partimos</h2><p>${md(D.datos.intro)}</p></div>
+  ${D.datos.tablas.map(t=>`<h3>${esc(t.titulo)}</h3>${table(t.cols,t.filas)}${t.fuente?`<div class="src">${md(t.fuente)}</div>`:""}`).join("")}
+  <div class="cols">
+    <div class="panel"><span class="tag good">Funcionó</span><ul>${D.datos.mejor.map(x=>`<li>${md(x)}</li>`).join("")}</ul></div>
+    <div class="panel"><span class="tag bad">No funcionó</span><ul>${D.datos.peor.map(x=>`<li>${md(x)}</li>`).join("")}</ul></div>
+  </div>`;
+
+// Calendario
+const byMonth = {};
+D.correos.forEach(c => (byMonth[monthKey(c.fecha)] ||= []).push(c));
+$("#calendario").innerHTML = `<div class="sec-head"><div class="eyebrow">3 · Calendario</div><h2>${D.correos.length} envíos, uno por semana</h2><p>${md(D.calendario_intro)}</p></div>
+  ${Object.entries(byMonth).map(([k,list])=>`<div class="month">${monthName(k)} · ${list.length} ${list.length===1?"envío":"envíos"}</div>
+  <div class="tbl"><table><thead><tr><th>Nº</th><th>Fecha</th><th>Tipo</th><th>Novedad</th><th>Ángulo</th><th>Cross-selling</th><th>Test</th></tr></thead><tbody>
+  ${list.map(c=>`<tr class="cal-row" tabindex="0" data-go="m${c.n}"><td class="num"><strong>#${c.n}</strong></td><td class="num">${fdate(c.fecha)} ${esc(c.fecha.slice(11))}</td><td>${esc(c.tipo)}</td><td>${esc(c.novedad)}</td><td>${esc(c.angulo)}</td><td>${esc(c.crosssell_producto||"—")}</td><td>${c.ab?`<span class="tag ab">${esc(c.ab)}</span>`:"—"}</td></tr>`).join("")}
+  </tbody></table></div>`).join("")}`;
+document.querySelectorAll(".cal-row").forEach(r => { const go = () => { $("#"+r.dataset.go)?.scrollIntoView(); }; r.addEventListener("click", go); r.addEventListener("keydown", e => { if (e.key==="Enter") go(); }); });
+
+// A/B
+$("#ab").innerHTML = `<div class="sec-head"><div class="eyebrow">4 · Test A/B</div><h2>${esc(D.ab.titulo)}</h2><p>${md(D.ab.intro)}</p></div>
+  <div class="cols">${D.ab.bloques.map(b=>`<div class="panel"><span class="tag ${b.tag||""}">${esc(b.etiqueta)}</span><div>${md(b.texto)}</div></div>`).join("")}</div>
+  ${D.ab.notas?.length?`<div class="panel"><ul>${D.ab.notas.map(n=>`<li>${md(n)}</li>`).join("")}</ul></div>`:""}`;
+
+// Correos
+const novedades = [...new Set(D.correos.map(c=>c.novedad))];
+const months = Object.keys(byMonth);
+function renderBody(lines){
+  let out = [], ol = [];
+  const flushOl = () => { if (ol.length){ out.push(`<ol>${ol.map(x=>`<li>${md(x)}</li>`).join("")}</ol>`); ol = []; } };
+  lines.forEach(p => {
+    const btn = p.match(/^\[Botón: (.+)\]$/);
+    const num = p.match(/^\d+\.\s+(.*)$/);
+    if (num){ ol.push(num[1]); return; }
+    flushOl();
+    if (btn) out.push(`<span class="btn">${esc(btn[1])}</span>`);
+    else if (/^P\. ?D\./.test(p)) out.push(`<p class="ps">${md(p)}</p>`);
+    else out.push(`<p>${md(p).replace(/\[([^\]]+)\]/g, '<span class="sec-link">$1</span>')}</p>`);
+  });
+  flushOl();
+  return out.join("");
+}
+function plain(c){
+  return [ ...c.asuntos.map(([k,v])=>`${k}: ${v}`), `Preheader: ${c.preheader}`, "", c.titular, "", ...c.cuerpo.flatMap(p=>[p,""]), c.firma ? `Firma: ${c.firma}` : "", c.crosssell ? `\nCross-selling: ${c.crosssell}` : "" ].join("\n").trim();
+}
+$("#correos").innerHTML = `<div class="sec-head"><div class="eyebrow">5 · Correos</div><h2>Los textos, uno por uno</h2><p>${md(D.correos_intro)}</p></div>
+  <div class="filters" role="group" aria-label="Filtrar correos">
+    <button type="button" id="f-all" aria-pressed="true" data-f="all">Todos</button>
+    ${months.map(m=>`<button type="button" id="f-${m}" aria-pressed="false" data-f="m:${m}">${monthName(m)}</button>`).join("")}
+    ${novedades.map((n,i)=>`<button type="button" id="f-n${i}" aria-pressed="false" data-f="n:${esc(n)}">${esc(n)}</button>`).join("")}
+  </div>
+  <div class="mails">${D.correos.map(c=>`
+  <article class="mail" id="m${c.n}" data-month="${monthKey(c.fecha)}" data-nov="${esc(c.novedad)}">
+    <div class="mail-card">
+      <div class="mail-top"><span><span class="mail-num">#${c.n}</span> · <span class="mail-date">${fdate(c.fecha)} · ${esc(c.fecha.slice(11))}</span></span><span class="tag">${esc(c.tipo)}</span></div>
+      <div class="subjects">${c.asuntos.map(([k,v])=>`<div class="subj"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join("")}
+        <div class="pre">Preheader: ${esc(c.preheader)}</div></div>
+      <div class="mail-body"><h3>${esc(c.titular)}</h3>${renderBody(c.cuerpo)}${c.firma?`<div class="sign">${esc(c.firma)}</div>`:""}</div>
+      ${c.crosssell?`<div class="xsell"><b>Cross-selling · ${esc(c.crosssell_producto||"")}</b><br>${md(c.crosssell)}</div>`:""}
+    </div>
+    <div class="side">
+      <div class="panel">
+        <div class="kv"><span class="k">Nombre en HubSpot</span><span class="v mono">${esc(c.hubspot)}</span></div>
+        <div class="kv"><span class="k">Ángulo</span><span class="v">${esc(c.angulo)}</span></div>
+        <div class="kv"><span class="k">Objetivo</span><span class="v">${md(c.objetivo||"—")}</span></div>
+        <div class="kv"><span class="k">Hipótesis</span><span class="v">${md(c.hipotesis)}</span></div>
+        <button type="button" class="copy" id="copy-${c.n}" data-n="${c.n}">Copiar texto del correo</button>
+      </div>
+      <div class="panel">
+        <details><summary>Enlaces y UTM (${c.enlaces.length})</summary><ul>${c.enlaces.map(([k,v])=>`<li><b>${esc(k)}</b><br><span class="mono">${esc(v)}</span></li>`).join("")}</ul></details>
+        ${c.sugerencias.length?`<details><summary>Sugerencias (${c.sugerencias.length})</summary><ul>${c.sugerencias.map(s=>`<li>${md(s)}</li>`).join("")}</ul></details>`:""}
+      </div>
+    </div>
+  </article>`).join("")}</div>`;
+document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".filters button").forEach(x => x.setAttribute("aria-pressed", String(x===b)));
+  const f = b.dataset.f;
+  document.querySelectorAll("article.mail").forEach(a => {
+    a.hidden = !(f==="all" || (f.startsWith("m:") && a.dataset.month===f.slice(2)) || (f.startsWith("n:") && a.dataset.nov===f.slice(2)));
+  });
+}));
+document.querySelectorAll(".copy").forEach(b => b.addEventListener("click", async () => {
+  const c = D.correos.find(x => x.n===b.dataset.n); const txt = plain(c);
+  try { await navigator.clipboard.writeText(txt); b.textContent = "Copiado"; b.classList.add("copied"); }
+  catch { const ta = document.createElement("textarea"); ta.value = txt; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy"); b.textContent="Copiado";}catch{b.textContent="Selecciona y copia";} ta.remove(); }
+  setTimeout(() => { b.textContent = "Copiar texto del correo"; b.classList.remove("copied"); }, 1800);
+}));
+
+// Pendiente
+$("#pendiente").innerHTML = `<div class="sec-head"><div class="eyebrow">6 · Pendiente</div><h2>Lo que necesito de ti</h2><p>${md(D.pendiente_intro)}</p></div>
+  <ol class="pend">${D.pendiente.map(p=>`<li>${md(p)}</li>`).join("")}</ol>
+  ${D.no_bloqueante?.length?`<div class="panel"><span class="tag">No frena nada</span><ul>${D.no_bloqueante.map(p=>`<li>${md(p)}</li>`).join("")}</ul></div>`:""}`;
+
+// Riesgos
+$("#riesgos").innerHTML = `<div class="sec-head"><div class="eyebrow">7 · Riesgos de lista</div><h2>Antes de montar nada</h2></div>
+  <div class="panel"><ul>${D.riesgos.map(r=>`<li>${md(r)}</li>`).join("")}</ul></div>`;
+
+$("#foot").innerHTML = md(D.pie);
+</script>
