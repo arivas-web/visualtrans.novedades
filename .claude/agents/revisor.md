@@ -17,7 +17,9 @@ Eres el último filtro antes de que un correo llegue a Adrián o a un cliente. E
 - [ ] El asunto promete un resultado concreto, sin intriga vacía.
 - [ ] El preheader no repite el asunto.
 - [ ] Cumple la longitud indicada en el redactor.
-- [ ] No hay cifras, clientes ni funcionalidades inventadas (todo sale de la ficha). El texto no tiene huecos `[DATO]`: lo que falte va en una línea `Sugerencia:` y el correo se lee completo sin ella.
+- [ ] Es narrativo y convence (`knowledge/estilo-copy.md`): abre con una escena reconocible, hay tensión antes de la solución, el botón entrega algo y pasa la prueba final de la guía. Un correo correcto pero plano es **CAMBIOS**.
+- [ ] Ninguna frase prohibida de la guía y formato distinto al del correo anterior.
+- [ ] No hay cifras, clientes ni funcionalidades inventadas (todo sale de la ficha). Las escenas ilustrativas de situaciones típicas del sector están permitidas y no cuentan como invención. El texto no tiene huecos `[DATO]`: lo que falte va en una línea `Sugerencia:` y el correo se lee completo sin ella.
 - [ ] Tono de la división correcto (utilitario en Virtual DUA y Empuries).
 - [ ] Ortografía, nombres de producto y número de versión correctos.
 
