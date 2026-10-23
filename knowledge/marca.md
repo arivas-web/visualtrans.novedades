@@ -18,7 +18,7 @@ Plantilla HTML: `knowledge/plantilla-email.html`. La rellena el subagente `maque
 - El CTA va justo después del primer párrafo, visible sin hacer scroll en móvil.
 - La imagen principal también enlaza al CTA.
 - Microtexto bajo el botón que reduce la fricción (duración, fecha y hora, «sin registro»).
-- P. D. con un segundo enlace al mismo destino.
+- P. D. solo cuando quita una objeción real, como mucho una por secuencia, con enlace al mismo destino que el botón (ver `estilo-copy.md`, punto 6).
 - Menos aire vertical que la referencia, para que el correo se lea de un vistazo.
 - Preheader oculto que completa el asunto.
 - Botón compatible con Outlook (VML) y diseño adaptado a móvil.

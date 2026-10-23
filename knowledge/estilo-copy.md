@@ -8,7 +8,7 @@ Lo pide Adrián: los correos tienen que ser **narrativos** y **convencer**, no d
 3. **Giro.** La novedad entra en escena como el cambio, no como una ficha técnica. «Con Cargofive, las tarifas de varias navieras entran en tiempo real y la oferta se genera sola.»
 4. **Prueba.** Qué va a ver o a conseguir en cuanto haga clic: el vídeo, la grabación, la guía. Una frase concreta, nunca «en el vídeo verás, en pocos minutos».
 5. **Un botón que entrega.** Verbo + lo que recibe: «Ver la cotización hecha», «Ver la grabación», «Reservar mi plaza».
-6. **P. D. que remata.** Quita la última objeción («¿No puedes a las 12:00? Te mandamos la grabación») o da un segundo motivo para hacer clic.
+6. **P. D. solo si quita una objeción real** («¿No puedes a las 12:00? Te mandamos la grabación»). Como mucho una por secuencia; nunca para reenvíos, enlaces secundarios ni cross-selling (Adrián, 23/10/2026: «abusamos de la P. D.»). Si no hay objeción que quitar, el correo termina en la firma.
 
 El titular (serif, sobre el texto) es la idea de la historia en una frase con tensión: «La cotización que gana es la que llega primero.» Nunca repite el asunto.
 
@@ -49,7 +49,7 @@ Rota el formato de una semana a otra y no repitas el mismo dos veces seguidas:
 «En el vídeo verás, en pocos minutos», «Descubre», «Te presentamos», «Nos complace anunciar», «solución integral», «llevar al siguiente nivel», «potente», «revolucionario», «no te lo pierdas», frases idénticas entre correos de la misma versión, y cualquier botón que pida contacto comercial (/contactar, /precios, «Me interesa»).
 
 ## Prueba final antes de entregar un correo
-1. Leyendo solo el titular, el botón y la P. D., ¿se entiende qué gano?
+1. Leyendo solo el titular y el botón, ¿se entiende qué gano?
 2. ¿La primera frase pinta una escena que el lector reconoce?
 3. ¿Hay tensión antes de la solución?
 4. ¿Lo reenviaría alguien a su jefe o a su compañero?
